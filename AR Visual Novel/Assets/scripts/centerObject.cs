@@ -36,7 +36,7 @@ public class centerObject : MonoBehaviour
         {
 
             placementPose = hits[0].pose;
-            var camForward = Camera.current.transform.forward;
+            var camForward = Camera.main.transform.forward;
             Vector3 cameraBearing = new Vector3(camForward.x, 0, camForward.z).normalized;
             placementPose.rotation = Quaternion.LookRotation(cameraBearing);
 

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class textClick : MonoBehaviour
 {
@@ -10,9 +11,23 @@ public class textClick : MonoBehaviour
     //This is what you need to show in the inspector.
     GameObject manager;
     public TestEnum choices;
-    void Awake() { manager= GameObject.Find("/game manager");
+    void Awake() {
+        manager= GameObject.Find("/game manager");
     }
-    void OnMouseDown() {
+
+
+    void Start()
+    {
+        EventTrigger trigger = GetComponent<EventTrigger>();
+        EventTrigger.Entry entry = new EventTrigger.Entry();
+        entry.eventID = EventTriggerType.PointerDown;
+        entry.callback.AddListener((data) => { OnPointerDownDelegate((PointerEventData)data); });
+        trigger.triggers.Add(entry);
+    }
+
+    public void OnPointerDownDelegate(PointerEventData data)
+    {
+        Debug.Log("press down");
         switch (choices)
         {
             case TestEnum.main:
@@ -22,7 +37,6 @@ public class textClick : MonoBehaviour
             case TestEnum.option1:
                 Debug.Log("OPTION1");
                 manager.GetComponent<manager>().continueTextOption1();
-
                 break;
             case TestEnum.option2:
                 Debug.Log("OPTION2");
@@ -32,5 +46,7 @@ public class textClick : MonoBehaviour
                 Debug.Log("NOTHING");
                 break;
         }
+
     }
+
 }

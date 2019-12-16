@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEditor.SceneManagement;
 
 public class manager : MonoBehaviour
 {
     public Dictionary<int, Dialogue> graph;
     public static int cursor;//stores an int because all dialogues are uniquely ID by an int
-    public string script; // script of dialouge to read;
+    int tempCur;
+    public TextAsset script; // script of dialouge to read;
     public Image mainImage;
     public Text textbox;
     public Image b1;
@@ -20,7 +22,6 @@ public class manager : MonoBehaviour
     public AudioSource AS;
     private Coroutine activeTyper, activeSpeaker;
     public bool MakeSounds;
-    int choice;
     bool click=false;
 
     //sounds
@@ -35,13 +36,14 @@ public class manager : MonoBehaviour
 
     void Awake()
     {
+        textbox.text = "press to start";
+        cursor = 0;
         speakerAudio = person1;
         click = false;
         AS = GetComponent<AudioSource>();
         graph = new Dictionary<int, Dialogue>();
         List<Dictionary<string, object>> data = CSVReader.Read(script);
         Debug.Log("lines read in: " + data.Count);
-        choice = -1;
         for (int i = 0; i < data.Count; ++i)
         {
             graph[i] = new Dialogue(i, data[i]);
@@ -80,6 +82,8 @@ public class manager : MonoBehaviour
 
     public void dialogueUpdate(string input)
     {
+        Debug.Log(graph[cursor].speaker + ": " + graph[cursor].text);
+
         if (activeTyper != null)
         {
             StopCoroutine(activeTyper);
@@ -94,15 +98,21 @@ public class manager : MonoBehaviour
 
     //continue text
     public void continueText() {
-        cursor = graph[cursor].defaultOption - 2;
-        click = true;
+        if (graph[cursor].options.Count <= 1)
+        {
+            if (cursor != 0)
+            {
+                tempCur = graph[cursor].defaultOption - 2;
+            }
+            click = true;
+        }
     }
 
     //option one continue, used after selecting option one
     public void continueTextOption1()
     {
 
-        cursor = graph[cursor].options[0] - 2;
+        tempCur = graph[graph[cursor].options[0] - 2].defaultOption - 2;
         click = true;
     }
 
@@ -110,7 +120,7 @@ public class manager : MonoBehaviour
     public void continueTextOption2()
     {
 
-        cursor = graph[cursor].options[1] - 2;
+        tempCur = graph[graph[cursor].options[0] - 2].defaultOption - 2;
         click = true;
     }
 
@@ -125,16 +135,19 @@ public class manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         //effect how you continue text, either by clicking textbox or selecting option
         if (graph[cursor].options.Count <= 1)
         {
-            mainImage.GetComponent<Collider2D>().enabled = true;
             b1.enabled = false;
             b2.enabled = false;
+            b1Text.enabled = false;
+            b2Text.enabled = false;
         }
         else
         {
-            mainImage.GetComponent<Collider2D>().enabled = false;
+            b1Text.enabled = true;
+            b2Text.enabled = true;
             b1Text.text = graph[graph[cursor].options[0] - 2].text;
             b2Text.text = graph[graph[cursor].options[1] - 2].text;
             b1.enabled = true;
@@ -143,13 +156,20 @@ public class manager : MonoBehaviour
         }
         //if clicked update text or end story
         if (click) {
-
+            click = false;
             if (graph[cursor].speaker == "End") // end cutscene
             {
+#if UNITY_EDITOR
+
+                UnityEditor.EditorApplication.isPlaying = false;
+
+#else
                 Application.Quit();
+#endif
             }
             else {
-                Debug.Log(graph[cursor].speaker + ": " + graph[cursor].text);
+                cursor = tempCur;
+                tempCur++;
                 dialogueUpdate(graph[cursor].text);
                 eventHandler();
             }
