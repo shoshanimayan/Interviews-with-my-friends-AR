@@ -1,2 +1,2 @@
 # Interviews-with-my-friends-AR
-an AR novel, based off interviews with my friends
+an AR visual novel game, based off interviews with my friends
