@@ -1,6 +1,6 @@
 speaker,text,event,default,options
 p1,test 1 no choice,none,3,a3
-p1,test 2 multi choice,none,4,"a4,5"
+p1,test 2 multi choice,on,4,"a4,5"
 p2,choice 1,none,6,a6
 p2,choice 2,none,6,a6
-End,Thank you for listening.,none,7,a7
+End,Thank you for listening.,off,7,a7

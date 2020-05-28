@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-
+using UnityEngine.SceneManagement;
 public class textClick : MonoBehaviour
 {
 
-    public enum TestEnum { main, option1, option2 };
+    public enum TestEnum { main, option1, option2, start };
 
     //This is what you need to show in the inspector.
     GameObject manager;
@@ -41,6 +41,10 @@ public class textClick : MonoBehaviour
             case TestEnum.option2:
                 Debug.Log("OPTION2");
                 manager.GetComponent<manager>().continueTextOption2();
+                break;
+            case TestEnum.start:
+                Debug.Log("START");
+                SceneManager.LoadScene(1);
                 break;
             default:
                 Debug.Log("NOTHING");

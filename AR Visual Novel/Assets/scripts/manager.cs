@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using UnityEditor.SceneManagement;
 
 public class manager : MonoBehaviour
 {
@@ -17,28 +16,31 @@ public class manager : MonoBehaviour
     public Image b2;
     public Text b1Text;
     public Text b2Text;
-
-    public float TyperDelay = 0.01f;
-    public AudioSource AS;
+    public GameObject fire;
+    public float TyperDelay = 0.0001f;
     private Coroutine activeTyper, activeSpeaker;
-    public bool MakeSounds;
     bool click=false;
-
     //sounds
-    public AudioClip person1;
-    AudioClip speakerAudio;
+    public AudioSource AS;
+    public AudioSource AS2;
+    public AudioClip speakerAudio;
+    public AudioClip fireplace;
+    public AudioClip spooky;
+    public bool MakeSounds;
+
+    //animation
+    public GameObject mouth;
+    float destination = .6f;
+
 
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    
 
     void Awake()
     {
         textbox.text = "press to start";
         cursor = 0;
-        speakerAudio = person1;
+        
         click = false;
         AS = GetComponent<AudioSource>();
         graph = new Dictionary<int, Dialogue>();
@@ -63,7 +65,7 @@ public class manager : MonoBehaviour
                 MakeSounds = true;
 
             textbox.text = input.Substring(0, i);
-            yield return new WaitForSeconds(TyperDelay);
+            yield return new WaitForSeconds(TyperDelay*Time.deltaTime);
         }
         MakeSounds = false;
         AS.volume = 0;
@@ -120,13 +122,39 @@ public class manager : MonoBehaviour
     public void continueTextOption2()
     {
 
-        tempCur = graph[graph[cursor].options[0] - 2].defaultOption - 2;
+        tempCur = graph[graph[cursor].options[1] - 2].defaultOption - 2;
         click = true;
     }
 
     //switch handler for differnt events, animation changes and music 
     public void eventHandler() {
-      
+        switch (graph[cursor].textEvent) {
+            case "on":
+                fire.SetActive(true);
+                AS2.clip = fireplace;
+                AS2.Play(0);
+                break;
+
+            case "off":
+                fire.SetActive(false);
+                AS2.Pause();
+                break;
+
+            case "scaryMusic":
+                AS2.clip = spooky;
+                AS2.Play(0);
+                break;
+
+
+            case "none":
+                Debug.Log("nothing");
+                break;
+
+            default:
+                Debug.Log("nothing");
+                break;
+
+        }
 
     }
 
@@ -135,7 +163,29 @@ public class manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (MakeSounds)
+        {
+            if (mouth.transform.localScale.x < destination)
+            {
+                mouth.transform.localScale = new Vector3(mouth.transform.localScale.x + .1f, mouth.transform.localScale.y, mouth.transform.localScale.z);
+            }
+            if (mouth.transform.localScale.x > destination)
+            {
+                mouth.transform.localScale = new Vector3(mouth.transform.localScale.x - .1f, mouth.transform.localScale.y, mouth.transform.localScale.z);
+            }
+            if (mouth.transform.localScale.x == destination)
+            {
+                if (destination == .4f)
+                    destination = .6f;
+                else
+                    destination = .4f;
+            }
 
+        }
+        else {
+            if(mouth.transform.localScale.x>.4f)
+                mouth.transform.localScale = new Vector3(mouth.transform.localScale.x - .1f, mouth.transform.localScale.y, mouth.transform.localScale.z);
+        }
         //effect how you continue text, either by clicking textbox or selecting option
         if (graph[cursor].options.Count <= 1)
         {

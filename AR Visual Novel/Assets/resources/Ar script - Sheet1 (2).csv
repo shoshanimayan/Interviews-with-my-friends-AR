@@ -1,0 +1,71 @@
+speaker,text,event,default,options
+p1,"Welcome, earlier this year I interviewd my friend Chris and asked him to tell me a weird story about something that happened to him, he has a lot of those.",none,3,a3
+p1,would you like to hear this story?,none,4,"""a4,5"""
+p2,yes,none,6,a6
+p2,no,none,71,a71
+p1,"great, here is his story, as he told it to me.",none,7,a7
+p1,"Sometimes you think you know someone, you sit next to them for a year or years maybe but then all the sudden one day they surprise you and after years of friendship years of coexistence you realize you may have never really known them at all.",on,8,a8
+p1,"So this is probably 2002 maybe I'm in about 22 years old, but I was in the Telecommunications industry since my first real job out of college is my first corporate job, normal cubical setup.",none,9,a9
+p1,"my cubemate next to me, we became pretty good friends. He was maybe 45, 46, long gray hair, well put together, shirt tucked in, prim and proper, and I kind of looked up to him a little bit, and we were cubemates so we became good friends.",none,10,a10
+p1,"We just kind of hit it off really. He was a real nice cool guy and we hung outside the office, some happy hours, sometimes I had him over for a barbecue, he kind of did the same in his place. in the office.",none,11,a11
+p1,"In the office, everybody knew us as just kind of being friends, and he was well respected in the office.",none,12,a12
+p1,"He was trying to get custody of his kids and it was about a three-month battle with his ex-wife who lives in Canada. He had pictures of his boys up so we knew he had kids. He'd say, ""I'm trying to get custody of my boys. You know, it's time. I remember him saying that like it's time and they're ready and I just thought that's pretty cool. I have a really close relationship with my dad and he had a 13 year old and 15 year old.",none,13,a13
+p1,"One day after a long battle he came into the office and said, I got my boys, we threw him a little party.",none,14,a14
+p1,"About a week later the boys come back in town and he had me over for dinner. So I got a chance to meet the boys. You could tell that they hadn't seen their dad in a while. They were very best behavior, he was as well. He was trying to make everything perfect for them, it was just a good night. I was really excited for Don that this happened.",none,15,a15
+p1,"About a month later he comes to work and starts going going on about how he's going to Russia, just out of the blue.",none,16,a16
+p1,"I'm like wow you taking the boys with you? and he says no, I'm going but they're staying here.",none,17,a17
+p1,"Which to me? I thought that was crazy, you got two kids you just custody and you're going to go on a week-long trip to Russia, it just seemed strange. So he said yeah, can you keep an eye on them? And I said sure I'll go over there and make sure they didn't burn down the house or something, you know.",none,18,a18
+p1,"While he was gone I took the boys to a movie one night, I took them to dinner, and me and the boys, we kind of bonded while he was gone.",none,19,a19
+p1,A week goes by and this is where things start to change.,none,20,a20
+p1,"This guy walks into the office, and remember he's got a normal gray hair, big locks. he comes in his hair is dyed. It's completely black, and his shirt is untucked. He's got the top three buttons unbuttoned, hanging out with a big gold chain, and it was just wild.",none,21,a21
+p1,"He gave me a big hug, and I'm like, look at this guy. You know, you see that he's had a great time in Russia and I just couldn't wait to hear his stories about it.",none,22,a22
+p1,"Immediately, I noticed something was different. he was speaking in Russian. And this guy wasn't russian, He'd never spoken Russian before. Even when he's speaking in English, He's speaking in a Russian accent.",none,23,a23
+p1,"at first everybody's laughing about it, sometimes you go to England or something, you'll come back with a little English twang or something, but now he was even speaking to customers on the phone in Russian in a Russian accent. Throughout the day we thought okay, that's funny, but it's time to give it a rest, but now it just gets thicker and thicker.",none,24,a24
+p1,"So that was the day, but it wasn't till that evening till things started to get creepy",none,25,a25
+p1,I'm sitting at home. It's dark. It's pretty late in the evening. I just remember all the lights were out and I'm sitting on my couch watching television and I get a ring.,none,26,a26
+p1,"It's the oldest son, I said hey buddy, how's it going? And he was whispering, and I'll never forget what he said.",none,27,a27
+p1,He said help this isn't our dad.,none,28,a28
+p1,"I wanted to drop the phone. I wanted to hang up and I didn't want any part of it. I mean I still get chills right now because I can hear that voice, he was desperate.",none,29,a29
+p1,"It was like something out of a movie, he gets his kids, he leaves for Russia, He comes back a totally different guy. New look, a new speech. So I try to get more information like hey, what do you mean? What do you mean he's not your dad?",none,30,a30
+p1,He said can you come over here? We're scared. We don't know what to do.,none,31,a31
+p1,So I go.,none,32,a32
+p1,It's about 30 minute ride over to the house and in my head is racing and I didn't know what I was going to be walking into.,none,33,a33
+p1,It was pretty tense. My mind was fried a little bit. I was definitely wondering what am I getting myself into here? What am I going to walk into?,none,34,a34
+p1,"So I go to the apartment and knocked on the door. He opens the door arms out big hug, you know, he's got that Russian accent again, and he goes ""come in, I'm making dinner"", some russian dish.",none,35,a35
+p1,"The guys in there making a Russian dish. He's Russian, and that accent is even thicker. The boys are kind of peering around the corner from the living room, scared to go into the kitchen.",none,36,a36
+p1,"at this point I'm really investigating, really trying to figure out what's going on with Don.",none,37,a37
+p1,"His eyes are different, chest hair hanging out, big gold chain, he's a full-fledged Russian mobster now.",none,38,a38
+p1,"I was in my head thinking okay, it's not him.  The boys  have been living with him, he's been back for 24 hours, and they're telling me this is not my dad.",none,39,a39
+p1,"He speaking like a mobster, He's carrying himself like a Russian mobster, I don't know what's going on with him or if it even is him.",none,40,a40
+p1,"I go talk to the boys, they're scared, they feel trapped.",none,41,a41
+p1,"And I said, you know, we got to get a hold of your mom. Have you called your mom after the custody battle? I found out this that night the mom had moved to Israel. Now, this is early 2000s, Google search wasn't as good, and not everybody had cell phone so they had a hard time getting a hold of their mom.",none,42,a42
+p1,"there was nothing I could do, so I had to tell them to hold tight, and went home. It was crazy, I didn't want to deal with this, it was like something out of a movie!",none,43,a43
+p1,"I thought, maybe  was he was Russian all along. A Russian spy or a Manchurian Candidate or something like that, and his mission was over and when he comes back to the States, now he can just be full-fledged Russian and he didn't care anymore.",none,44,a44
+p1,"There was a creepyness about his eyes, kind of a blank stare, and he never broke character once.",none,45,a45
+p1,I go to work the next morning and he's still in the same get up carrying himself like a Russian mobster. He's just not himself.,none,46,a46
+p1,And of course everybody work is coming up to me saying hey and what's what's up with Don? Why is he acting like that? it's so weird. and I don't have any answers for them,none,47,a47
+p1,"We do decide to go do a little happy hour, some of the guys and gals at work. We're at a little happy hour spot, and everybody's got an opinion on what happened to Don.",none,48,a48
+p1,"I'm talking to, it gets quiet and I could tell, he's behind me.",none,49,a49
+p1,"And he's just standing there with this stare, with these eyes, dark black hair from the dyr, his Russian mobster getup. He's just standing there looking at us, our table.",none,50,a50
+p1,"I remember that night it turned from it was funny, to little bit annoying, and now I'm just angry. I'm like, come on man, what's wrong with you?",none,51,a51
+p1,"The next morning I go to work, but he doesn't show up. I called the boys and they're still a little frightened and they say he didn't come home last night.",none,52,a52
+p1,"I feared the worst, hey said can you come get us we just want out of here.",none,53,a53
+p1,"So I got them, and left a note for Don saying ""hey man, you need to get things straight. the boys are gonna stay with me until you start acting right.",none,54,a54
+p1,"Once I had the boys at my house, but that was probably when things came to a head.",none,55,a55
+p1,"Later that night, there was a loud knocking on the door, an angry booming knock.",none,56,a56
+p1,"Don was banging on the door, an angry russian mobster screaming about how I had kidnapped his kids, and how I couldn't do this, and he wanted them back.",none,57,a57
+p1,"I told him through the door that his kids were scared, and that I was scared, and that if he didnt leave I would call the cops",none,58,a58
+p1,"he he slows down and he said okay, I'll be better tomorrow. I'll be better tomorrow.",none,59,a59
+p1,"I felt crazy. Is this real? Is this really going on? It was like his Russian brother or something, It was it was a totally different guy.",none,60,a60
+p1,"""What did this guy do with Don?"" the boys were probably thinking, ""what do he do with our real dad""",none,61,a61
+p1,"At this point, I mean, he knows where I live, and I am really scared, and I'm debating. I think I need to call the cops. I think I need to get them involved on this.",none,62,a62
+p1,"The next morning he comes to work. he's at it again, and he's out of control, the boss comes over to try to talk to him and Don starts cussing him out infront of everyone",none,63,a63
+p1,"He gets fired and then he doesn't take it very well. He takes one of those tin cans, you know the holiday tin cans with popcorn in it. He takes one of those and throws it at the boss, popcorn goes everywhere. They call the cops.",none,64,a64
+p1,"The police common and put him in a straight jacket, and that was the last time I saw Don.",none,65,a65
+p1,"of course after this the entire office is a buzz about what happened, and everyone's got their own theories about Don. All i know is what I saw was a normal guy, and within a week he comes back as someone else.",off,66,a66
+p1,"The boys ended up getting a flight out to the ex-wife, she sent some tickets. We got them on a plane and got them back to their mom, and she filled me in on Don's life.",none,67,a67
+p1,"For years he was just this great, well respected guy, but he just wanted to take care of his kids, so much that he felt he needed to give them a mother.",none,68,a68
+p1,"So he went to Russia to get a mail order bride. While he was there, he forgot his medication from the states. I didn't really know about mental illness at that time, but once he got to Russia he didn't have his medication.",none,69,a69
+p1,"When his mind flipped he was Russian. That was his new normal. That was his new life. He was a Russian. To see a person that you respected who was living a normal life, to see how that can just change in an instant, It really opened my eyes to just have tragic mental illness is",none,70,a70
+p1,"yea so I guess that's my story for ya man, at first it was funny, then annoying, then scary, and then tragic.",none,71,a71
+End,Thanks for listening.,none,72,a72
